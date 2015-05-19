@@ -383,7 +383,7 @@ function connectKeyboard(){
 
   var keyboardOptions = {
     layout : 'custom',
-    
+
     display: {
       'meta1': "?123",
       'b'      : '\u2190:Backspace',
@@ -421,14 +421,6 @@ function connectKeyboard(){
   $('#nameFull').keyboard(keyboardOptions).addTyping({showTyping : true});
   $('#email').keyboard(keyboardOptions).addTyping({showTyping : true});
   $('#zipcode').keyboard(keyboardOptions).addTyping({showTyping : true});
-
-  // setTimeout(function(){
-  //   $('.ui-keyboard').each(function(){
-  //     console.log('what');
-  //     $(this).append('<div class="keyboard-background-shadow"></div>');
-  //   });
-  // },50)
-  
 
   $('#nameFull').getkeyboard().reveal();
   $('#nameFull').parents('.form-group').addClass('has-form-empty');
@@ -638,9 +630,6 @@ function homeStageTransitions(){
         setTimeout(function(){
           factoidTransition($('.factoid'), 'inactive-factoid', 'unveil', 0);
         },1000);
-        // setTimeout(function(){
-        //  factoidTransition($('.factoid'), 'inactive-factoid', 'jiggle', 0);
-        // },1400);
       }
 
     }
@@ -734,7 +723,7 @@ function mapTypeInits(){
         }
       }
 
-      
+
 
       setTimeout(function(){
         target.addClass('active');
@@ -974,39 +963,6 @@ function mySolutionsFormSubmission(){
   });
 }
 
-
-
-// function mySolutionsScrolling(){
-//  $('.solutions-navigation-arrow.arrow-up').on('mouseover',function(){
-//    $('.solutions-navigation-arrow.arrow-down').removeClass('active');
-//    var clicked = $(this);
-//    var container = $(this).parent().parent().parent();
-//    var amountToScroll = container.scrollTop();
-//    amountToScroll = amountToScroll - 300;
-//    customScrollTo(container, amountToScroll, 500);
-//    setTimeout(function(){
-//      if (container.scrollTop() <= 0){
-//        clicked.addClass('active');
-//      }
-//    },500)
-//  });
-//  $('.solutions-navigation-arrow.arrow-down').on('mouseover',function(){
-//    $('.solutions-navigation-arrow.arrow-up').removeClass('active');
-//    var clicked = $(this);
-//    var container = $(this).parent().parent().parent();
-//    var amountToScroll = container.scrollTop();
-//    amountToScroll = amountToScroll + 300;
-//    customScrollTo(container, amountToScroll, 500);
-//    setTimeout(function(){
-//      if ( ( $('.solutions-favorites-container').height() - container.height() ) <= container.scrollTop() ) {
-//        clicked.addClass('active');
-//      }
-//    },500)
-//  });
-// }
-
-
-
 /*
   This is called on form submission on Settings page.
 
@@ -1122,7 +1078,7 @@ function settingsPageInits(){
     if (!$('.settings-page')[0]){
       window.location.replace("/settings.html");
     }
-    
+
   }
 }
 
